@@ -21,11 +21,11 @@ const headerStyle = {
 const getCmdColor = (cmd) => {
   switch (cmd) {
     case '23':
-      return '#9999ff'; // синій 
+      return '#27e696'; // зелений 
     case '116':
-      return '#99ff99'; // зелений
+      return '#eb34e8'; // фіолетовий
     case '31':
-      return '#ff9999'; // червоний
+      return '#d64f4f'; // червоний
     case '101':
       return '#ff1099'; // червоний
     default:
@@ -43,7 +43,8 @@ const DataTable = ({ data }) => {
   // Фільтруємо рядки, що містять допустимі CMD
   const filteredLines = lines.filter(line => {
     const match = line.match(/CMD=(\d+)/);
-    return match && allowedCommands.includes(match[1]);
+    //return match && allowedCommands.includes(match[1]);
+    return match
   });
 
   // Розділяємо рядки на дату, CMD та вміст
